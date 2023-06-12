@@ -1,7 +1,6 @@
 HELP.md
-target/
-!**/src/main/**/target/
-!**/src/test/**/target/
+bin/
+.gradle/
 
 # maven-wrapper.jar
 **/maven-wrapper.jar
