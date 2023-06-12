@@ -32,3 +32,8 @@ tasks.withType<Test> {
 tasks.named<Jar>("jar") {
     enabled = false
 }
+
+// Notes about running this project locally with graalvm native image
+// - Must add to plugins  id("org.graalvm.buildtools.native") version "0.9.20"
+// - Must also remove tasks.named<Jar>("jar") { enabled = false }
+// When you do the above, you will break the ability for the build service to build image.  So only do this temporarily will doing local development
