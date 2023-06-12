@@ -12,6 +12,8 @@ spec:
     env:
       - name: BP_JVM_VERSION
         value: "17"
+      - name: BP_NATIVE_IMAGE
+        value: "true"
   params:
   - name: annotations
     value:
