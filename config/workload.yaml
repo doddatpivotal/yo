@@ -14,6 +14,23 @@ spec:
         value: "17"
       - name: BP_NATIVE_IMAGE
         value: "true"
+      - name: BP_GRADLE_ADDITIONAL_BUILD_ARGUMENTS
+        value: -Dspring-boot.aot.jvmArguments='-Dmanagement.endpoint.health.probes.add-additional-paths='true' -Dmanagement.endpoint.health.show-details='always' -Dmanagement.endpoints.web.base-path='/actuator' -Dmanagement.endpoints.web.exposure.include='*' -Dmanagement.health.probes.enabled='true' -Dmanagement.server.port=8081 -Dserver.port=8080'
+  env:
+    - name: MANAGEMENT_SERVER_PORT
+      value: "8081"
+    - name: MANAGEMENT_ENDPOINT_HEALTH_PROBES_ADD_ADDITIONAL_PATHS
+      value: "true"
+    - name: MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS
+      value: "always"
+    - name: MANAGEMENT_ENDPOINTS_WEB_BASE_PATH
+      value: "/actuator"
+    - name: MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE
+      value: "*"
+    - name: MANAGEMENT_HEALTH_PROBES_ENABLED
+      value: "true"
+    - name: SERVER_PORT
+      value: "8080"
   params:
   - name: annotations
     value:
